@@ -12,28 +12,6 @@
     flex-wrap: wrap;
 }
 
-.square_easy{
-    flex-basis: calc(100%/10);
-    height: calc(100%/10);
-    border: solid 1px black;
-}
-
-.square_mid{
-    flex-basis: calc(100%/9);
-    height: calc(100%/9);
-    border: solid 1px black;
-}
-
-.square_hard{
-    flex-basis: calc(100%/7);
-    height: calc(100%/7);
-    border: solid 1px black;
-}
-
-.clicked{
-    background-color: blueviolet;
-}
-
 .wrapper{
     background-color: rgb(179, 103, 103);
     display: flex;
@@ -57,11 +35,6 @@ button{
     background-color: rgb(187, 156, 156);
 }
 
-/* Pari o dispari */
-.clicked-blue{
-    background-color: rgb(110, 110, 161);
-}
-
-.clicked-red{
-    background-color: red;
+.disappear{
+    display: none;
 }
