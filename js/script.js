@@ -10,7 +10,27 @@ for (let i = 0; i < 5; i++) {
     myDiv.append(playNums);
 }
 
+let seconds = 1;
+const counting = setInterval(myCountdown, 1000);
 
+function myCountdown() {
+
+    if (seconds === 0) {
+
+        // clearInterval ti ferma il setInterval
+        clearInterval(counting);
+        parseInt(prompt("Inserisci il primo numero"));
+        parseInt(prompt("Inserisci il secondo numero"));
+        parseInt(prompt("Inserisci il terzo numero"));
+        parseInt(prompt("Inserisci il quarto numero"));
+        parseInt(prompt("Inserisci il quinto numero"));
+
+    } else{
+        
+        seconds--;
+        // seconds = seconds - 1;
+    }
+}
 
 /*
 Prova 1
@@ -23,7 +43,7 @@ setTimeout(() => alert("la pasta è pronta!!"), seconds * 1000);
 Prova 2
 creare un countdown
 const divEl = document.getElementById("grid");
-let seconds2 = 10;
+let seconds = 10;
 const counting = setInterval(conteggio, 1000);
 */
 
@@ -65,9 +85,9 @@ endBtn.addEventListener("click",
 // funzione che crea un countdown
 function conteggio() {
 
-    divEl.innerHTML = seconds2;
+    divEl.innerHTML = seconds;
 
-    if (seconds2 === 0) {
+    if (seconds === 0) {
 
         // clearInterval ti ferma il setInterval
         clearInterval(counting);
@@ -75,8 +95,8 @@ function conteggio() {
 
     } else{
         
-        seconds2--;
-        // seconds2 = seconds2 - 1;
+        seconds--;
+        // seconds = seconds - 1;
     }
 }
 
