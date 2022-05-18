@@ -5,16 +5,21 @@ let myArray = [];
 let userArray = [];
 
 for (let i = 0; i < 5; i++) {
+
     let playNums = getRandomNumMinMax(1, 1000);
     console.log(playNums);
+
     const myDiv = document.createElement("div");
+
     myRandomNums.append(myDiv);
+
     myDiv.append(playNums);
+
     myArray.push(playNums);
     console.log(myArray);
 }
 
-let seconds = 1;
+let seconds = 30;
 const counting = setInterval(myCountdown, 1000);
 
 function myCountdown() {
@@ -25,12 +30,11 @@ function myCountdown() {
         clearInterval(counting);
 
         myRandomNums.classList.add("disappear");
-        const numberOne = parseInt(prompt("Inserisci il primo numero"));
-        const numberTwo = parseInt(prompt("Inserisci il secondo numero"));
-        const numberThree = parseInt(prompt("Inserisci il terzo numero"));
-        const numberFour = parseInt(prompt("Inserisci il quarto numero"));
-        const numberFive = parseInt(prompt("Inserisci il quinto numero"));
-        userArray.push(numberOne, numberTwo, numberThree, numberFour, numberFive);
+
+        while (userArray.length < 5) {
+            const secretNum = parseInt(prompt("Inserisci il tuo numero"));
+            userArray.push(secretNum);
+        }
 
         console.log(userArray);
     } else{
@@ -52,26 +56,6 @@ function myCountdown() {
 
     if (resultNum > 0) {
         console.log("Il tuo risultato è:", resultNum);
-    }
-}
-
-
-
-// funzione che crea un countdown
-function conteggio() {
-
-    divEl.innerHTML = seconds;
-
-    if (seconds === 0) {
-
-        // clearInterval ti ferma il setInterval
-        clearInterval(counting);
-        alert("Buon anno");
-
-    } else{
-        
-        seconds--;
-        // seconds = seconds - 1;
     }
 }
 
